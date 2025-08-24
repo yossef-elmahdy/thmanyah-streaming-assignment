@@ -1,0 +1,26 @@
+{
+    "name": "thmanyah-postgres-connector",
+    "config": {
+        "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+        "topic.prefix": "thmanyah",
+        "database.hostname": "postgres",
+        "database.port": "5432",
+        "database.user": "postgres",
+        "database.password": "postgres",
+        "database.dbname": "thmanyah_db",
+        "plugin.name": "pgoutput",
+        "table.include.list": "public.engagement_events,public.content",
+        "slot.name": "debezium_slot",
+        "publication.name": "debezium_pub",
+        "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+        "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+        "key.converter.schemas.enable": "false",
+        "value.converter.schemas.enable": "false",
+        "decimal.handling.mode": "double",
+        "time.precision.mode": "adaptive_time_microseconds",
+        "transforms": "unwrap",
+        "transforms.unwrap.type": "io.debezium.transforms.ExtractNewRecordState",
+        "transforms.unwrap.drop.tombstones": "true",
+        "include.schema.changes": "false"
+    }
+}
