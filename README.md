@@ -151,6 +151,11 @@ Define all variables in `.env` (see `.env.example` for a template):
 
 ---
 
+## Short Demo 
+![Watch 5s demo (MOV)](./demo/videos/short-demo.gif)
+
+
+
 ## Screenshots
 
 Below are some screenshots demonstrating the project in action:
@@ -200,7 +205,7 @@ Below are some screenshots demonstrating the project in action:
 
 ---
 
-## Author
+## 🚀 Author
 
 **Youssef El-Mahdy**  
 Senior Data Engineer  
